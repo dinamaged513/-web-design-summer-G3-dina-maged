@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span>html</span>
+    <b>html</b>
+    <strong>html</strong>
+    <i>html</i>
+ <small>html</small>
+    <mark>html</mark>
+    <del>html</del>
+    <ins>html</ins>
+    <sub>html</sub>
+    <sup>html</sup>
+    <u>html</u>
+    <s>html</s>
+
+<hr>
+
+<!--. autocomplete="off"
+بيمنع المتصفح من اقتراح أو ملء البيانات تلقائيًا التي كتبها المستخدم من قبل. 
+   . method="post"
+بتحدد طريقة إرسال البيانات إلى السيرفر.-->
+<form autocomplete="off" method="post" align="center">
+  <h2>registertion form</h2>
+  <label for="first-name">first name</label>
+  <input type="text" name="first name" required autocomplete="off" 
+  placeholder="enter your first name"> <br> 
+
+  <label for="name">last name</label>
+  <input type="text" id="name" name="last name" required autocomplete="off" 
+  placeholder="enter your last name" > <br> 
+
+  <label>email</label>
+  <input type="email" id="email" name="email"  > <br>
+
+    <label for="">password</label> 
+    <input type="password"  name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
+     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"> <br> 
+
+   <label>shipping area</label>
+<input type="text" name="shipping area" value="alex" disabled >
+<input type="text" name="shippingArea" value="cairo" readonly>      <br>
+
+   <label>gender</label>
+   <input type="radio"   name="gender" value="male">
+   <label>male</label>
+   <input type="radio"   name="gender" value="female">
+   <label>female</label> <br>
+
+   <label for="">age</label>
+   <input type="number" name="age" min="18"> <br>
+
+  <label for="">Track</label>
+        <input type="checkbox" name="track" value="web">
+        <label>Web Design</label>
+        <input type="checkbox" name="track" value="net">
+        <label>Network</label>
+        <input type="checkbox" name="track" value="bk">
+        <label>Backend</label> <br>
+
+<select name="courses" id="" >
+            <option value="" disabled selected>Choose your course</option>
+            <option value="0">Html</option>
+            <option value="1">Css</option>
+            <option value="2">Boostrap</option>
+            <option value="3">JS</option>
+        </select> <br>
+
+<label>Address</label>
+        <textarea name="address" rows="5" cols="30" placeholder="Enter your address"></textarea> <br>
+
+    <input type="file" accept="" multiple> <br>
+
+    <input type="color"> <br>
+
+    <input type="date">
+        <input type="datetime-local">
+        <input type="time">
+        <input type="month"> <br>
+
+        <label for="">ID Number</label>
+        <input type="text" maxlength="14"  required > <br>
+
+ <input type="submit" value="add User">
+        <button type="reset">Clear</button>
+        <button type="button">Sign up</button>
+
+
+
+
+</form>
+</body>
+</html>

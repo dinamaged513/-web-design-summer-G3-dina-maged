@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <form action="task1.php" method="post" align="center">
+        <fieldset><legend>Registr form</legend>  
+            <h2>registertion form</h2>
+            
+            <label for="first-name">first name</label>
+            <input type="text" name="first-name" required autocomplete="off" maxlength="5" pattern="[A-Za-z]+" > <br>
+           
+            <label for="email">email</label>
+            <input type="email" name="email" required autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" > <br>
+            
+            <label for="phone">phone</label>
+            <input type="tel" name="phone" required autocomplete="off" pattern="01[0125][0-9]{8}" > <br>
+           
+                <label for="img">Image</label>
+               <input type="file" name="img"  accept=".png"> <br>
+
+               <label for="course">Courses</label>
+               <input list="courses" name="course"   required>
+               <datalist id="courses">
+                   <option value="computer-science">
+                   <option value="html">
+                   <option value="css">
+               </datalist> <br>
+
+               <label>Data</label>
+                <input type="date" name="data" required> <br>
+
+                <label>comment</label>
+                <input type="text" name="comment" required pattern="[A-Za-z]+"> <br>
+
+                <label>range</label>
+                <input type="range" name="range" min="100" max="200" > <br>
+
+                <label>gender</label>
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female <br>
+
+                <label>track</label>
+                <input type="checkbox" name="track" value="web"> Web Design
+                <input type="checkbox" name="track" value="net"> Network
+                <input type="checkbox" name="track" value="bk"> Backend <br>
+
+                <input type="submit"  name="submit"  > 
+                <button type="reset">reset</button>
+
+                
+          
+            
+          </fieldset>
+                
+               
+    </form>
+</body>
+</html>
