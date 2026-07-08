@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: white;}
+   
+    .pricing{
+        width: 90%;
+        margin: 70px auto;
+        text-align: center;
+        padding: 60px;
+        background-color: rgb(187, 181, 181);
+    }
+    .pricing h1{
+    font-size:40px;
+    color:black;
+    margin-bottom:15px;
+}
+.text{
+    color:gray;
+    margin-bottom:50px;
+}
+ .line{
+    width: 100px;
+    height: 5px;
+    background-color: orange;
+    margin: 10px auto;
+ }
+.card:first-child .top{
+    border-bottom: 5px solid orange;
+}
+
+.card:last-child .top{
+    border-bottom: 5px solid orange;
+}
+   .cards{
+    display:flex; /*حطهو جمب بعض بالعرض*/
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /*اذا ما في مساحة كافية يروح للصف الثاني*/
+}
+
+   .card{
+    width:300px;
+    background:white;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+.top h2{
+    padding: 20px;
+    border-bottom:  solid gray;
+}
+  .top{
+    background:black;
+    color:white;
+    padding:20px;
+}
+.top h2{
+    margin-bottom:20px;
+}
+
+.top h3{
+    font-size:60px;
+}
+.top p{
+    margin-top:10px;
+}
+
+.popular{
+    background:orange;
+    color:white;
+    padding:12px;
+    font-weight:bold;
+}
+.card ul {
+list-style: none;
+padding: 0;
+margin: 0;
+
+}
+
+.card ul li:last-child{
+    border-bottom:none;
+}
+
+.card ul{
+    list-style:none;
+}
+.card ul li{
+    padding:18px;
+    border-bottom:1px solid gray;
+    color:gray;
+}
+.card:hover{ /* لما احط الماوس على الكارد */
+    transform:translateY(-10px);
+    transition:.4s;
+}
