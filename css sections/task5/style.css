@@ -175,3 +175,588 @@ form button{
 form button:hover{
     background:#e67e22;
 }
+
+/*الكود ده معمول بـ **CSS** لتنسيق صفحة Landing Page. هشرحه جزء جزء:
+
+---
+
+## 1. Reset
+
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+```
+
+* `*` يعني اختار **كل عناصر الصفحة**.
+* `margin:0;` يشيل أي مسافات خارجية افتراضية.
+* `padding:0;` يشيل أي مسافات داخلية افتراضية.
+* `box-sizing:border-box;`
+  يخلي الـ `width` والـ `height` يشملوا الـ padding والـ border.
+* `font-family`
+  يخلي الخط الافتراضي Arial ولو مش موجود يستخدم Helvetica.
+
+---
+
+## 2. body
+
+```css
+body{
+    background:#fff;
+}
+```
+
+لون خلفية الصفحة أبيض.
+
+---
+
+## 3. container
+
+```css
+.container{
+    width:80%;
+    margin:auto;
+}
+```
+
+* `width:80%`
+  عرض المحتوى 80% من الشاشة.
+
+* `margin:auto`
+  يوسّطه في الصفحة.
+
+---
+
+# 4. nav
+
+```css
+nav{
+    width:100%;
+    background:#000;
+    padding:10px 0;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+```
+
+ده شريط التنقل.
+
+* `width:100%`
+  ياخد عرض الشاشة كله.
+
+* `background:#000`
+  أسود.
+
+* `padding:10px 0`
+  مسافة فوق وتحت 10px.
+
+* `position:absolute`
+  يخليه فوق الصورة.
+
+* `top:0`
+  يبدأ من أعلى الصفحة.
+
+* `left:0`
+  يبدأ من الشمال.
+
+* `z-index:1000`
+  يخليه فوق باقي العناصر.
+
+---
+
+## 5. محتويات الـ nav
+
+```css
+nav .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+```
+
+حول العناصر إلى Flex.
+
+* `display:flex`
+  يخلي العناصر جنب بعض.
+
+* `justify-content:space-between`
+  اللوجو ناحية، والقائمة ناحية.
+
+* `align-items:center`
+  يخليهم في منتصف ارتفاع الـ nav.
+
+---
+
+## 6. Logo
+
+```css
+.logo h1{
+    color:#fff;
+    font-size:25px;
+    font-weight:bold;
+}
+```
+
+تنسيق كلمة AXIT.
+
+---
+
+```css
+.logo span{
+    color:#ff8b38;
+}
+```
+
+يغير لون الجزء داخل `<span>` إلى برتقالي.
+
+---
+
+## 7. القائمة
+
+```css
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+```
+
+* `list-style:none`
+  يشيل النقط.
+
+* `display:flex`
+  يخلي العناصر في صف واحد.
+
+* `gap:35px`
+  يسيب مسافة بينهم.
+
+---
+
+## 8. روابط القائمة
+
+```css
+nav ul li a{
+    text-decoration:none;
+    color:#d7d7d7;
+    font-size:10px;
+    transition:.3s;
+}
+```
+
+* يشيل الخط تحت الرابط.
+* يخلي اللون رمادي.
+* حجم الخط 10.
+* أي تغيير يحصل في 0.3 ثانية.
+
+---
+
+```css
+nav ul li a:hover{
+    color:#ff8b38;
+}
+```
+
+عند مرور الماوس اللون يبقى برتقالي.
+
+---
+
+# 9. Hero
+
+```css
+.hero{
+    width:100%;
+    height:100vh;
+```
+
+* عرض الشاشة كله.
+* ارتفاع الشاشة كلها.
+
+---
+
+```css
+background:url("./images/sunset-8170058_1280.jpg");
+```
+
+يحط صورة الخلفية.
+
+---
+
+```css
+background-size:cover;
+```
+
+يكبر الصورة حتى تملأ الشاشة.
+
+---
+
+```css
+background-position:center;
+```
+
+يخلي منتصف الصورة ظاهر.
+
+---
+
+```css
+position:relative;
+```
+
+حتى تكون مرجعًا للـ overlay.
+
+---
+
+# 10. Overlay
+
+```css
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+```
+
+يغطي الصورة كلها.
+
+---
+
+```css
+background:rgba(0,0,0,.55);
+```
+
+طبقة سوداء شفافة بنسبة 55%.
+
+---
+
+# 11. محتوى الـ Hero
+
+```css
+.hero .container{
+    position:relative;
+    z-index:2;
+```
+
+حتى يظهر فوق الـ Overlay.
+
+---
+
+```css
+display:flex;
+justify-content:space-between;
+align-items:center;
+```
+
+يقسم الصفحة إلى قسمين:
+
+* اليسار
+* الفورم
+
+---
+
+# 12. الجزء الأيسر
+
+```css
+.left{
+    width:45%;
+    color:#fff;
+}
+```
+
+يشغل 45% من العرض.
+
+---
+
+## العنوان
+
+```css
+.left h1{
+    font-size:70px;
+}
+```
+
+حجم كبير.
+
+---
+
+```css
+.left span{
+    color:#ff8b38;
+}
+```
+
+جزء من العنوان برتقالي.
+
+---
+
+## العنوان الثاني
+
+```css
+.left h2{
+    margin-top:20px;
+    font-size:35px;
+    font-weight:300;
+    line-height:1.2;
+}
+```
+
+* ينزل 20px.
+* الخط كبير.
+* رفيع.
+* تباعد الأسطر 1.2.
+
+---
+
+# 13. الخط الأبيض
+
+```css
+.line{
+    width:75px;
+    height:2px;
+    background:#fff;
+    margin:35px 0;
+}
+```
+
+يرسم خطًا أبيض.
+
+---
+
+# 14. الفقرة
+
+```css
+.left p{
+    width:430px;
+    color:#ddd;
+    line-height:1.8;
+}
+```
+
+* عرض محدد.
+* لون رمادي فاتح.
+* تباعد بين السطور.
+
+---
+
+# 15. الزر
+
+```css
+.left button{
+```
+
+زر Download.
+
+---
+
+```css
+background:transparent;
+```
+
+شفاف.
+
+---
+
+```css
+border:2px solid #fff;
+```
+
+إطار أبيض.
+
+---
+
+```css
+transition:.3s;
+```
+
+الانتقال ناعم.
+
+---
+
+```css
+.left button:hover{
+    background:#fff;
+    color:#000;
+}
+```
+
+عند المرور بالماوس يصبح:
+
+* الخلفية بيضاء.
+* الخط أسود.
+
+---
+
+# 16. الفورم
+
+```css
+form{
+    width:300px;
+    background:#fff;
+    border-radius:5px;
+    overflow:hidden;
+}
+```
+
+* عرض 300px.
+* أبيض.
+* حواف دائرية.
+* أي عنصر خارج الحدود يختفي.
+
+---
+
+## عنوان الفورم
+
+```css
+form h2{
+```
+
+تنسيق العنوان.
+
+---
+
+```css
+background:#f5f5f5;
+```
+
+خلفية رمادي فاتح.
+
+---
+
+## span
+
+```css
+form span{
+    color:#ff8b38;
+}
+```
+
+الكلمة داخل span برتقالية.
+
+---
+
+# 17. حقول الإدخال
+
+```css
+form input{
+```
+
+تنسيق جميع الـ input.
+
+---
+
+```css
+width:85%;
+```
+
+يشغل 85% من الفورم.
+
+---
+
+```css
+display:block;
+```
+
+كل input في سطر.
+
+---
+
+```css
+margin:30px auto;
+```
+
+* 30px فوق وتحت.
+* يتوسط أفقيًا.
+
+---
+
+```css
+border:none;
+```
+
+يشيل الإطار.
+
+---
+
+```css
+border-bottom:1px solid #ddd;
+```
+
+يضع خطًا أسفل فقط.
+
+---
+
+```css
+outline:none;
+```
+
+يشيل الإطار الأزرق عند الضغط.
+
+---
+
+# 18. زر الفورم
+
+```css
+form button{
+```
+
+زر Get Started.
+
+---
+
+```css
+width:100%;
+```
+
+يمتد بعرض الفورم كله.
+
+---
+
+```css
+background:#ff8b38;
+```
+
+برتقالي.
+
+---
+
+```css
+cursor:pointer;
+```
+
+المؤشر يصبح يدًا عند المرور.
+
+---
+
+```css
+transition:.3s;
+```
+
+انتقال ناعم.
+
+---
+
+```css
+form button:hover{
+    background:#e67e22;
+}
+```
+
+عند مرور الماوس يصبح البرتقالي أغمق.
+
+---
+
+### ملخص سريع للخصائص المهمة
+
+* `display: flex;` ➜ ترتيب العناصر جنب بعض.
+* `justify-content: space-between;` ➜ توزيع العناصر على الطرفين.
+* `align-items: center;` ➜ توسيط العناصر رأسيًا.
+* `position: absolute;` ➜ وضع العنصر فوق غيره أو في مكان محدد.
+* `position: relative;` ➜ يجعل العنصر مرجعًا للعناصر المطلقة.
+* `z-index;` ➜ يحدد أي عنصر يظهر فوق الآخر.
+* `background-size: cover;` ➜ تجعل صورة الخلفية تملأ المساحة بالكامل.
+* `transition;` ➜ يضيف حركة ناعمة عند التغيير.
+* `:hover` ➜ يطبق التنسيق عند مرور الماوس.
+* `overflow: hidden;` ➜ يخفي أي جزء يخرج خارج حدود العنصر.
+*/
