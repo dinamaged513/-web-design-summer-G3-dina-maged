@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: white;
+    border-style: solid;
+border-width: 1px;
+border-color: black rgb(197, 187, 187) rgb(197, 191, 191) black;
+padding: 10px;
+}
+.contact{
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+}
+.contact h1{
+    font-size: 40px;
+    font-weight: 200;
+}
+.line{
+width: 10%;
+height: 4px;
+background: orange;
+margin: 15px auto 20px;
+}
+
+.contact p{
+    color: gray;
+   margin-bottom: 50px ;   
+}
+
+form{
+    display:flex;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+.left,
+.right{
+    width: 500px;
+}
+.left input{
+    width: 100%;
+    border: none;
+    border-bottom:1px solid #d2cccc ;
+     padding:15px 5px;
+    margin-bottom:30px;
+    outline:none;
+    font-size:16px;
+}
+.right textarea{
+    width:100%;
+    height:170px;
+    border:none;
+    border-bottom:1px solid #d2cccc;
+    resize:none;
+    outline:none;
+    padding:15px 5px;
+    font-size:16px;
+}
+button{
+    margin-top:40px;
+    background:orange;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:orange;
+}
